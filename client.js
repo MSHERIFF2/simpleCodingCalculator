@@ -13,8 +13,28 @@ btnGet.addEventListener('click', () => {
 })
 
 const calcSumBtnGet = (num1, num2) => {
+    result.innerHTML = "waiting for server response..."
     const api = "https://simplecodingcalculator-2.onrender.com"
     fetch(`api?number1=${num1}&number2=${num2}`)
     .then(res => res.text())
     .then(data => result.innerHTML = data)
+    .catch( (erro) => console.error("Error:", error))
+}
+
+const calcSumBtnPost = (num1, num2) => {
+    result.innerHTML = "waiting for server response..."
+    const api = "https://simplecodingcalculator-2.onrender.com"
+    fetch(`api`, {
+        method: POST,
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            num1: num1,
+            num2: num2
+        })
+    })
+    .then(res => res.text())
+    .then(data => result.innerHTML = data)
+    .catch( (erro) => console.error("Error:", error))
 }
