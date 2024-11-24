@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
     let sum = num1 + num12;
 
     res.send("The sum of numbers is " + sum)
-  res.send("Waiting for input from client")
+    res.send("Waiting for input from client")
 
 })
 

@@ -3,3 +3,98 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: antiquewhite;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+    /* border:1px solid green; */
+    margin: auto;
+    margin-top: 10%;
+
+}
+.container button{
+    background-color: blue;
+    width: 28%;
+    border:1px solid green;
+    margin: auto;
+    margin-top: 8px;
+    height: 40px;
+    border-radius: 2ch;
+    color: whitesmoke;
+    font-size: 18px;
+    font-family: verdana;
+    cursor: pointer;
+
+}
+.container input{
+    height: 45px;
+    margin: auto;
+    margin-top: 10px;
+    width: 30%;
+    font-size: 16px;
+    font-family: verdana;
+   
+}
+
+.result{
+    width: 50%;
+    margin: auto;
+    border-radius: 20px;
+    text-align: center;
+    font-family: verdana;
+    font-size: 20px;
+    color: green;
+    font-weight: bolder;
+    margin-top: 15px;
+    box-shadow: 2px 2px 2px rgba(red, green, blue, alpha);
+}
+
+.heading{
+    text-align: center;
+    font-family: verdana;
+    font-size: 23px;
+    margin-top: 26px;
+    color: green;
+}
+
+@media screen and (max-width: 420px) {
+    .container button{
+        background-color: blue;
+        width: 100%;
+        border:1px solid green;
+        margin: auto;
+        margin-top: 8px;
+        height: 40px;
+        border-radius: 2ch;
+        color: whitesmoke;
+        font-size: 18px;
+        font-family: verdana;
+        cursor: pointer;
+    
+    }
+    .container input{
+        
+        width: 100%;
+        border-radius: 5px;
+        border: none;
+       
+       
+    }
+    
+    .result{
+        width: 80%;
+       
+    }
+    
+    .heading{
+        text-align: center;
+        font-family: verdana;
+        font-size: 16px;
+        margin-top: 26px;
+        color: green;
+    }
+    
+}

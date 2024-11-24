@@ -1,6 +1,6 @@
-const btnPost = document.getElementById('calcSumButtonPost')
-const btnGet = document.getElementById('calcSumButtonGet')
-const result = document.getElementById('result')
+const btnPost = document.getElementById("calcSumButtonPost")
+const btnGet = document.getElementById("calcSumButtonGet")
+const result = document.getElementById("result")
 
 const num1Element = document.getElementById('num1')
 const num2Element = document.getElementById('num2')
@@ -14,27 +14,27 @@ btnGet.addEventListener('click', () => {
 
 const calcSumBtnGet = (num1, num2) => {
     result.innerHTML = "waiting for server response..."
-    const api = "https://simplecodingcalculator-2.onrender.com"
-    fetch(`api?number1=${num1}&number2=${num2}`)
+    
+    fetch(`https://simplecodingcalculator.onrender.com?number1=${num1}&number2=${num2}`)
     .then(res => res.text())
     .then(data => result.innerHTML = data)
     .catch( (erro) => console.error("Error:", error))
 }
 
-const calcSumBtnPost = (num1, num2) => {
+const calcSumBtnPost = (number1, number2) => {
     result.innerHTML = "waiting for server response..."
-    const api = "https://simplecodingcalculator-2.onrender.com"
-    fetch(`api`, {
-        method: POST,
+    
+    fetch(`https://simplecodingcalculator.onrender.com`, {
+        method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            num1: num1,
-            num2: num2
+            num1: number1,
+            num2: number2
         })
     })
     .then(res => res.text())
     .then(data => result.innerHTML = data)
-    .catch( (erro) => console.error("Error:", error))
+    .catch( (error) => console.error("Error:", error))
 }
